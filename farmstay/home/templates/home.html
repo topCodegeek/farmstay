@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% block head %}
+    <title>Nisarg: Rural Escape</title>
+  {% endblock %}
+</head>
+<body>
+
+  {% block content %}
+
+    <!-- Hero Section -->
+    <section class="hero d-flex flex-column justify-content-center align-items-center">
+      <h1>Take a pause. <br>The city can wait.</h1>
+      <p>Stay in real homes. Eat from the earth.</p>
+      <div>
+        <a href="#" class="btn btn-outline-warning">Plan Your Escape <i class="ri-arrow-right-line"></i></a>
+      </div>
+    </section>
+
+    <!-- Locations Section -->
+    <div class="container py-5">
+      <h2 class="section-title"><i class="ri-landscape-line"></i>Beautiful Places</h2>
+      <div class="row g-4">
+        <div class="col-md-5">
+          <div class="card location-card border-0">
+            <img src="{% static 'mulshi.jpg' %}" class="card-img-top" height="250" alt="Mulshi">
+            <div class="card-body">
+              <h5 class="card-title"><i class="ri-map-pin-line"></i>Mulshi</h5>
+              <p class="card-text">Green valleys. Red soil.</p>
+              <a href="#" class="btn btn-outline-success">Explore Stays <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="card location-card border-0">
+            <img src="{% static 'tamhini.jpg' %}" class="card-img-top" height="250" alt="Tamhini">
+            <div class="card-body">
+              <h5 class="card-title"><i class="ri-map-pin-line"></i>Tamhini</h5>
+              <p class="card-text">Misty hills. Dense forests.</p>
+              <a href="#" class="btn btn-outline-success">Explore Stays <i class="ri-arrow-right-line"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Activities Section -->
+    <div class="container py-5">
+      <h2 class="section-title"><i class="ri-tree-line"></i>Rural Activities</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card activity-card border-0">
+            <img src="{% static 'chulha.webp' %}" class="card-img-top" height="220" alt="Cooking">
+            <div class="card-body">
+              <h5 class="card-title">Cooking on चूल्हा</h5>
+              <p class="card-text">Learn to cook on a village stove</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card activity-card border-0">
+            <img src="{% static 'farm.jpg' %}" class="card-img-top" height="220" alt="Farming">
+            <div class="card-body">
+              <h5 class="card-title">Farming</h5>
+              <p class="card-text">Join in sowing and harvesting</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card activity-card border-0">
+            <img src="{% static 'cows.jpeg' %}" class="card-img-top" height="220" alt="Cows">
+            <div class="card-body">
+              <h5 class="card-title">Milking Cows</h5>
+              <p class="card-text">Give it a try in the morning</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {% endblock %}
+</body>
+</html>
