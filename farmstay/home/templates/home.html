@@ -4,7 +4,7 @@
 <html lang="en">
 <head>
   {% block head %}
-    <title>Nisarg: Rural Escape</title>
+    <title>Gaav Manatla: Rural Escape</title>
   {% endblock %}
 </head>
 <body>
@@ -24,26 +24,18 @@
     <div class="container py-5">
       <h2 class="section-title"><i class="ri-landscape-line"></i>Beautiful Places</h2>
       <div class="row g-4">
-        <div class="col-md-5">
-          <div class="card location-card border-0">
-            <img src="{% static 'mulshi.jpg' %}" class="card-img-top" height="250" alt="Mulshi">
-            <div class="card-body">
-              <h5 class="card-title"><i class="ri-map-pin-line"></i>Mulshi</h5>
-              <p class="card-text">Green valleys. Red soil.</p>
-              <a href="#" class="btn btn-outline-success">Explore Stays <i class="ri-arrow-right-line"></i></a>
+        {% for location in locations %}
+          <div class="col-md-5">
+            <div class="card location-card border-0">
+              <img src="{{ location.thumbnail }}" class="card-img-top" height="250" alt="Mulshi">
+              <div class="card-body">
+                <h5 class="card-title"><i class="ri-map-pin-line"></i>{{ location.name }}</h5>
+                <p class="card-text">{{ location.description }}</p>
+                <a href="#" class="btn btn-outline-success">Explore <i class="ri-arrow-right-line"></i></a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-5">
-          <div class="card location-card border-0">
-            <img src="{% static 'tamhini.jpg' %}" class="card-img-top" height="250" alt="Tamhini">
-            <div class="card-body">
-              <h5 class="card-title"><i class="ri-map-pin-line"></i>Tamhini</h5>
-              <p class="card-text">Misty hills. Dense forests.</p>
-              <a href="#" class="btn btn-outline-success">Explore Stays <i class="ri-arrow-right-line"></i></a>
-            </div>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
 
@@ -53,7 +45,7 @@
       <div class="row g-4">
         <div class="col-md-4">
           <div class="card activity-card border-0">
-            <img src="{% static 'chulha.webp' %}" class="card-img-top" height="220" alt="Cooking">
+            <img src="{% static 'Chulha.png' %}" class="card-img-top" height="220" alt="Cooking">
             <div class="card-body">
               <h5 class="card-title">Cooking on चूल्हा</h5>
               <p class="card-text">Learn to cook on a village stove</p>
@@ -62,7 +54,7 @@
         </div>
         <div class="col-md-4">
           <div class="card activity-card border-0">
-            <img src="{% static 'farm.jpg' %}" class="card-img-top" height="220" alt="Farming">
+            <img src="{% static 'Farming.png' %}" class="card-img-top" height="220" alt="Farming">
             <div class="card-body">
               <h5 class="card-title">Farming</h5>
               <p class="card-text">Join in sowing and harvesting</p>
@@ -71,7 +63,7 @@
         </div>
         <div class="col-md-4">
           <div class="card activity-card border-0">
-            <img src="{% static 'cows.jpeg' %}" class="card-img-top" height="220" alt="Cows">
+            <img src="{% static 'Milking.png' %}" class="card-img-top" height="220" alt="Cows">
             <div class="card-body">
               <h5 class="card-title">Milking Cows</h5>
               <p class="card-text">Give it a try in the morning</p>

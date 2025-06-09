@@ -8,6 +8,9 @@
      .section-title{
           font-size:2.5rem;
      }
+     .service-strip, footer {
+          font-size: 1rem;
+     }
 }
 @media (max-width: 488px) {
      .hero {
@@ -22,5 +25,8 @@
      }
      .section-title{
           font-size: 2.1rem;
+     }
+     .service-strip, footer {
+          font-size: 0.8rem;
      }
 }
