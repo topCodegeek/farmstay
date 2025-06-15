@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     {% block head %}
+          <title>Explore Locations and Stays</title>
+     {% endblock %}
+</head>
+<body>
+
+     {% block content %}
+     
+     <!-- Locations Section -->
+     <div class="container py-5">
+          <h2 class="section-title"><i class="ri-landscape-line"></i>Explore Locations</h2>
+          <div class="row g-4">
+          {% for location in locations %}
+          <div class="col-md-5">
+               <div class="card location-card border-0">
+               <img src="{{ location.thumbnail }}" class="card-img-top" height="250" alt="{{ location.name }}">
+               <div class="card-body">
+                    <h5 class="card-title"><i class="ri-map-pin-line"></i>{{ location.name }}</h5>
+                    <p class="card-text">{{ location.description }}</p>
+                    <a href="{% url 'view_location' location.id %}" class="btn btn-outline-success">Explore <i class="ri-arrow-right-line"></i></a>
+               </div>
+               </div>
+          </div>
+          {% endfor %}
+          </div>
+     </div>
+     
+     {% endblock %}
+
+</body>
+</html>

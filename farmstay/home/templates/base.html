@@ -9,16 +9,16 @@
      <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
           rel="stylesheet"/>
      <link rel="stylesheet" href="{% static 'stylesheets/styles.css' %}">
-     <link rel="stylesheet" href="{% static 'stylesheets/mediaqueries.css' %}">
      {% block head %}{% endblock %}
+     <link rel="stylesheet" href="{% static 'stylesheets/mediaqueries.css' %}">
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-light bg-light">
+  <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
     <div class="container px-4">
-      <a class="navbar-brand d-flex align-items-center" href="#">
-        <img src="{% static 'favicon.ico' %}" alt="Logo" class="me-2">
+      <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
+        <img src="{% static 'favicon.ico' %}" alt="Gaav Manatla logo" class="me-2">
         <span>गांव मनातलं</span>
       </a>
       <div class="collapse navbar-collapse">
@@ -26,7 +26,7 @@
           <ul class="navbar-nav mx-auto">
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Places</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'locations' %}">Places</a></li>
           </ul>
         </div>
         <div class="ms-auto nav-brand ">
@@ -52,7 +52,7 @@
           <ul class="navbar-nav mx-auto">
             <li class="nav-item"><a class="nav-link" href="#">About</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Places</a></li>
+            <li class="nav-item"><a class="nav-link" href="{% url 'locations' %}">Places</a></li>
 
             <button class="btn btn-primary">Sign Up</button>
           </ul>
@@ -60,7 +60,7 @@
 </div>
   
 
-    <div style="min-height: 100%; margin-bottom: 3rem;">
+    <div style="min-height: 90vh;">
         {% block content %}{% endblock %}
     </div>
     <br><br>

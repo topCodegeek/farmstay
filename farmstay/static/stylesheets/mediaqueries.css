@@ -30,3 +30,19 @@
           font-size: 0.8rem;
      }
 }
+@media(max-width:768px){
+     #carouselExampleIndicators {
+          height: 40vw;
+          margin-top: 2.5rem;
+          margin-left: 15vw;
+          margin-right: 15vw;
+     }
+}
+@media (max-width: 480px) {
+     #carouselExampleIndicators {
+          height: 27vh;
+          margin-top: 2rem;
+          margin-left: 8vw;
+          margin-right: 8vw;
+     }
+}

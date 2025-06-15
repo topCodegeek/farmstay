@@ -27,15 +27,16 @@
         {% for location in locations %}
           <div class="col-md-5">
             <div class="card location-card border-0">
-              <img src="{{ location.thumbnail }}" class="card-img-top" height="250" alt="Mulshi">
+              <img src="{{ location.thumbnail }}" class="card-img-top" height="250" alt="{{ location.name }}">
               <div class="card-body">
                 <h5 class="card-title"><i class="ri-map-pin-line"></i>{{ location.name }}</h5>
                 <p class="card-text">{{ location.description }}</p>
-                <a href="#" class="btn btn-outline-success">Explore <i class="ri-arrow-right-line"></i></a>
+                <a href="{% url 'view_location' location.id %}" class="btn btn-outline-success">Explore <i class="ri-arrow-right-line"></i></a>
               </div>
             </div>
           </div>
         {% endfor %}
+        <a href="{% url 'locations' %}"><h5 class="section-para">View more<i class="ri-arrow-right-line"></i></h5></a>
       </div>
     </div>
 
@@ -44,29 +45,32 @@
       <h2 class="section-title"><i class="ri-tree-line"></i>Rural Activities</h2>
       <div class="row g-4">
         <div class="col-md-4">
-          <div class="card activity-card border-0">
-            <img src="{% static 'Chulha.png' %}" class="card-img-top" height="220" alt="Cooking">
-            <div class="card-body">
+          <div class="card activity-card text-bg-dark">
+            <img src="{% static 'Chulha.png' %}" class="card-img" alt="Milking cows" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+            <div class="card-img-overlay">
               <h5 class="card-title">Cooking on चूल्हा</h5>
               <p class="card-text">Learn to cook on a village stove</p>
+              <p class="card-text"><small>Last updated 3 mins ago</small></p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card activity-card border-0">
-            <img src="{% static 'Farming.png' %}" class="card-img-top" height="220" alt="Farming">
-            <div class="card-body">
+          <div class="card activity-card text-bg-dark">
+            <img src="{% static 'Farming.png' %}" class="card-img" alt="Milking cows" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+            <div class="card-img-overlay">
               <h5 class="card-title">Farming</h5>
               <p class="card-text">Join in sowing and harvesting</p>
+              <p class="card-text"><small>Last updated 3 mins ago</small></p>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card activity-card border-0">
-            <img src="{% static 'Milking.png' %}" class="card-img-top" height="220" alt="Cows">
-            <div class="card-body">
+          <div class="card activity-card text-bg-dark">
+            <img src="{% static 'Milking.png' %}" class="card-img" alt="Milking cows" style="border-bottom-left-radius: 15px; border-bottom-right-radius: 15px;">
+            <div class="card-img-overlay">
               <h5 class="card-title">Milking Cows</h5>
-              <p class="card-text">Give it a try in the morning</p>
+              <p class="card-text">Give it a try in the morning.</p>
+              <p class="card-text"><small>Last updated 3 mins ago</small></p>
             </div>
           </div>
         </div>
