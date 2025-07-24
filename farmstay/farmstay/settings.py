@@ -26,7 +26,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'home',
+    "rest_framework",
+    "api",
 ]
+
+LOGIN_REDIRECT_URL = '/api/locations'  # For api login
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
