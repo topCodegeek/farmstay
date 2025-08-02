@@ -21,7 +21,8 @@ from home import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
-
+    path('accounts/', include('allauth.urls')),
+    
     path('', views.home, name='home'),
     path('locations/', views.locations, name='locations'),
     path('location/<int:id>', views.view_location, name='view_location'),

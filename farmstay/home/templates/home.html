@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load socialaccount %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,6 +20,7 @@
         <a href="#" class="btn btn-outline-warning">Plan Your Escape <i class="ri-arrow-right-line"></i></a>
       </div>
     </section>
+    <a href="{% provider_login_url 'google' %}">Google</a>
 
     <!-- Locations Section -->
     <div class="container py-5">
