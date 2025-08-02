@@ -22,8 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
     path('accounts/', include('allauth.urls')),
+    path('api/login_with_google/', views.login_with_google, name="login_with_google"),
     
-    path('', views.home, name='home'),
+    path('oldhome', views.home, name='home'),
     path('locations/', views.locations, name='locations'),
     path('location/<int:id>', views.view_location, name='view_location'),
 ]
