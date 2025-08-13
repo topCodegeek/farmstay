@@ -42,6 +42,7 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend', # allauth
 ]
 
+SOCIALACCOUNT_QUERY_EMAIL = True # allauth
 SITE_ID = 1 # allauth
 
 SOCIALACCOUNT_LOGIN_ON_GET = True
