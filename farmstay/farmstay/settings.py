@@ -42,13 +42,13 @@ AUTHENTICATION_BACKENDS = [
     'allauth.account.auth_backends.AuthenticationBackend', # allauth
 ]
 
-SOCIALACCOUNT_QUERY_EMAIL = True # allauth
 SITE_ID = 1 # allauth
 
+LOGIN_URL = 'login_with_google'
 SOCIALACCOUNT_LOGIN_ON_GET = True
 ACCOUNT_LOGOUT_REDIRECT_URL = '/accounts/login/'
 
-LOGIN_REDIRECT_URL = '/api/locations'  # For api login
+LOGIN_REDIRECT_URL = 'https://youtu.be/dQw4w9WgXcQ?si=xr_MnkOXq--z9eUD'  # For api login
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

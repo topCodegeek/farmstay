@@ -18,3 +18,7 @@ class ResortSerializer(ModelSerializer):
           model = Resort
           fields = ['id', 'name', 'description', 'thumbnail', 'rating', 'location']
 
+class CouponSerializer(ModelSerializer):
+     class Meta:
+          model = Coupon
+          fields = ['id', 'coupon', 'name', 'discount']

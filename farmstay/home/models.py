@@ -17,3 +17,11 @@ class Resort(models.Model):
 
      def __str__(self):
           return "{}, {}".format(self.name, self.location.name)
+     
+class Coupon(models.Model):
+     coupon = models.CharField(max_length=10)
+     name = models.CharField(max_length=20)
+     discount = models.IntegerField()
+
+     def __str__(self):
+          return self.coupon

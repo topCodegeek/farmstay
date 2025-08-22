@@ -3,8 +3,11 @@ from django.urls import reverse
 from .models import Location
 
 def login_with_google(request):
-    url = reverse("google_login")
-    return redirect(url)
+     if request.user.is_authenticated:
+          return redirect('coupons')
+
+     url = reverse("google_login")
+     return redirect(url)
 
 def home(request):
      locations = Location.objects.all()[:5]

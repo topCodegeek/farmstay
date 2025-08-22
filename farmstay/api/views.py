@@ -2,7 +2,8 @@ from django.contrib.auth.models import User
 from home.models import *
 from rest_framework import generics
 from .serializers import *
-from rest_framework.permissions import BasePermission
+from rest_framework.permissions import *
+from rest_framework.exceptions import ValidationError
 
 APP_NAME = "api"
 
@@ -51,3 +52,13 @@ class ResortRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
 
      def get_queryset(self):
           return super().get_queryset()
+     
+class CouponsListView(generics.ListCreateAPIView):
+     serializer_class = CouponSerializer
+     permission_classes = [IsAuthenticated]
+
+     def get_queryset(self):
+          if self.request.user.username!='ishaantopkar':
+               raise ValidationError({'El bozo (400)': 'Got you nerd 😜', 'message':"Don't worry ur data isn't saved 🙂"})
+          else:
+               return Coupon.objects.all()

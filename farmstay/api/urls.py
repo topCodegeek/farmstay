@@ -14,4 +14,7 @@ urlpatterns = [
      path('locations/<int:pk>', LocationRetrieveUpdateDestroyView.as_view()),
      path('resorts', ResortsListView.as_view()),
      path('resorts/<int:pk>', ResortRetrieveUpdateDestroyView.as_view()),
+
+     path('coupons', CouponsListView.as_view(), name='coupons'),
+
 ]
